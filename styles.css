@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    font-family: 'Space Mono', monospace;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+  
+body {
+    background-color: hsl(185, 41%, 84%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+h1 {
+    position: absolute;
+    top: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    color: hsl(183, 100%, 15%);
+}
+  
+.tip-calculator-container {
+    background-color: hsl(0, 0%, 100%);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    display: flex;
+    margin-top: 8rem;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    max-width: 90%;
+}
+  
+.enter-tip-sec {
+    width: 50%;
+}
+  
+.form-group label,
+.select-tip {
+    color: hsl(184, 14%, 56%);
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+  
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+}
+  
+.input-group.person-error #numberOfPeople,
+.input-group.number-error #bill {
+    border: 0.2rem solid red;
+}
+  
+.input-group i {
+    background-color: hsl(185, 41%, 84%);
+    font-size: 1.4rem;
+    padding: 1.3rem;
+    color: hsl(189, 41%, 97%);
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+  
+.input-group .input {
+    border: 0;
+    background-color: hsl(185, 41%, 84%);
+    font-size: 2rem;
+    padding: 0.5rem 2rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    color: hsl(183, 100%, 15%);
+    font-weight: 600;
+    text-align: right;
+    width: 100%;
+}
+  
+.input-group .input::placeholder {
+    color: hsl(186, 14%, 43%);
+    opacity: 1; 
+}
+
+.tip-perc {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1.5rem;
+}
+  
+.tip-perc .percent-tip {
+    font-size: 2.4rem;
+    font-weight: 600;
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(189, 41%, 97%);
+    padding: 0.7rem 3.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+  
+.percent-tip:hover {
+    background-color: hsl(172, 67%, 45%);
+}
+  
+.percent-tip.clicked {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+  
+.icon {
+    font-size: 1.4rem;
+    background-color: hsl(185, 41%, 84%);
+    padding: 8.5px;
+    border-top-left-radius : 1rem;
+    border-bottom-left-radius : 1rem;
+}
+  
+.custom-tip {
+    font-size: 2rem;
+    font-weight: 600;
+    background-color: hsl(189, 41%, 97%);
+    color: hsl(183, 100%, 15%);
+    padding: 0.7rem;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    border: 0;
+    text-align: left;
+    width: 4.55em;
+}
+  
+.custom-tip:hover {
+    border: 0.2rem solid hsl(172, 67%, 45%);
+}
+  
+.custom-tip:focus {
+    border: 0.2rem solid hsl(183, 100%, 15%);
+}
+  
+.custom-tip::placeholder {
+    color: hsl(186, 14%, 43%);
+    opacity: 1;
+}
+  
+.show-tip-sec {
+    width: 50%;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 1.2rem;
+    padding: 1.2rem;
+    color: #fff;
+    position: relative;
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 28rem;
+}
+  
+.tip-amount {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+  
+.totale {
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+  
+.info {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-left: 2rem;
+    color: hsl(184, 14%, 56%);
+}
+  
+.have-to-pay {
+    color: hsl(172, 67%, 45%);
+    font-size: 4rem;
+}
+  
+.resetBtn {
+    background-color: hsl(172, 67%, 45%);
+    font-size: 2.4rem;
+    font-weight: 600;
+    padding: 0.6rem;
+    color: hsl(183, 100%, 15%);
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    border-radius: 0.5rem;
+}
+  
+.resetBtn:focus {
+    transform: scale(0.98);
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    appearance: textfield;
+}
+  
+/* Responsiveness */
+@media (max-width: 1110px) {
+    .tip-calculator-container {
+      flex-direction: column;
+      margin-top: 15rem;
+    }
+    .enter-tip-sec {
+      width: 100%;
+    }
+    .show-tip-sec {
+      margin: 3.5rem 0;
+      width: 100%;
+    }
+}
+  
+@media (max-width: 550px) {
+    .totale {
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+  
+    .info {
+      font-size: 1.4rem;
+      margin-left: 0rem;
+    }
+  
+    .have-to-pay {
+      color: hsl(172, 67%, 45%);
+      font-size: 2rem;
+    }
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
